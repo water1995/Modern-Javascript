@@ -44,4 +44,47 @@ class UI{
     `;
 
   }
+
+  //Show Alert Message
+  showAlert(message,className){
+
+    //Clear any remaining alerts
+    this.clearAlert();
+
+    //Create div
+    const div = document.createElement('div');
+
+    //Add classes
+    div.className = className;
+
+    //Add text
+    div.appendChild(document.createTextNode(message));
+
+    //Get Parent
+    const container = document.querySelector('.search-container');
+
+    //Get search box
+    const search = document.querySelector('.search');
+
+    //Insert Alert
+    container.insertBefore(div,search);
+
+      setTimeout(() => { this.clearAlert();},3000);
+
+  }
+
+   //Clear alert message
+
+  clearAlert(){
+
+    const currentAlert = document.querySelector('.alert');
+    if(currentAlert){
+      currentAlert.remove();
+    }
+  }
+
+  //Clear Profile
+  clearProfile(){
+    this.profile.innerHTML = '';
+  }
 }

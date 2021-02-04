@@ -20,7 +20,7 @@ class uic{
     this.string.textContent = `${weather.current.temp_c}C ${weather.current.temp_f}F`;
     this.icon.setAttribute('src',weather.current.condition.icon);
     this.humidity.textContent = `Humidity : ${weather.current.humidity}`;
-    this.feelsLike.textContent = `Feel's Like : ${weather.current.feelsLike_c}C  ${weather.current.feelsLike_f}F`;
+    this.feelsLike.textContent = `Feel's Like : ${weather.current.feelslike_c}C     ${weather.current.feelslike_f}F`;
     this.wdirec.textContent = `Wind direction : ${weather.current.wind_dir}`;
     this.wind.textContent = `Wind : ${weather.current.wind_kph} km/hr  ${weather.current.wind_mph} miles/hr`;
 

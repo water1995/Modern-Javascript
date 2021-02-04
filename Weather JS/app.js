@@ -1,5 +1,13 @@
-const Weather = new weather('Boston','MA');
+const uiw = new uic();
+const wn = new weather('Boston','MA');
 
-Weather.getWeather().then( results => {console.log(results)}).catch(err => console.log(err));
+document.addEventListener('DOMContentLoaded',getWeather);
 
-//document.addEventListener('DOMContentLoaded',getWeather);
+
+function getWeather(){
+
+wn.getWeather().then(results => {
+
+  uiw.paint(results);
+  console.log(results)}).catch(err => console.log(err));
+}
